@@ -14,12 +14,9 @@
     <a href="#about">About</a>
     <a href="#demo">Demo</a>
   </nav>
-    <main>
-      <p>こんにちは、原澤です。出版社でメディア企画を…</p>
-      <p>この90日チャレンジでは、AIやARを活用して…</p>
-      <br>
-      <h2>🌸私の好きな花 BEST3🌸</h2>
-      <br>
+    <main class="content">
+      <p>私はWebAR開発を勉強中の原澤です。</p>
+      <p>このサイトでは、GLBモデルや水彩イラストをARで表示する実験をしています。</p>
         <ul class="flower-list">
          <li>ケイトウ (Celosia)</li>
          <li>ヒマワリ (Sunflower)</li>
@@ -126,6 +123,26 @@ border-bottom: 2px solid var(--color-accent);
         line-height: 1.6;
         list-style-type: disc;
     }
+
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    @media (max-width: 300px) {
+      .content {
+        max-width: 90%;
+        padding: 16px;
+      }
+
+      .flower-list {
+        padding-left: 16px; /* モバイルでインデント調整 */
+      }
+    }
+
+    
+    
 
   </style>
   
