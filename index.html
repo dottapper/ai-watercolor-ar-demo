@@ -27,8 +27,17 @@
       <p>&copy; 2025 Harasawa Makiko</p>
     </footer>
   </body>
-  
+
   <style>
+
+  :root {
+    --color-bg: #121212;
+    --color-bg-secondary: #1a1a1a;
+    --color-text: #ffffff;
+    --color-text-soft: #cccccc;
+  }
+  
+  
     .site-header {
         display: flex;
         justify-content: space-between;
@@ -56,18 +65,24 @@
       margin: 0;
       padding: 0;
     }
-    header {
-      background: #1a1a1a;
-      color: #fff;
-      padding: 24px;
+
+    header,footer {
+      background: var(--color-bg-secondary);
     }
+
+    body {
+      background: var(--color-bg);
+      color: var(--color-text);
+    }
+
     main {
       padding: 24px;
     }
+
+
     footer {
-      background: #1a1a1a;
-      color: #ccc;
-      padding: 16px;
+      color: var(--color-text-soft);
+      padding: 24px;
       text-align: center;
     }
 
@@ -78,5 +93,5 @@
         list-style-type: disc;
     }
 
-        </style>
+  </style>
   
