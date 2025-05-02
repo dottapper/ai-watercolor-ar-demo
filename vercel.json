@@ -1,0 +1,6 @@
+{
+    "rewrites": [
+      { "source": "/github-mark.svg", "destination": "/public/github-mark.svg" }
+    ]
+  }
+  
