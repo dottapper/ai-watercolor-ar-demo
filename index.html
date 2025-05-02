@@ -9,7 +9,11 @@
         </a>
       </nav>
     </header>
-  
+  <nav class="main-nav">
+    <a href="#top" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#demo">Demo</a>
+  </nav>
     <main>
       <p>こんにちは、原澤です。出版社でメディア企画を…</p>
       <p>この90日チャレンジでは、AIやARを活用して…</p>
@@ -35,8 +39,38 @@
     --color-bg-secondary: #1a1a1a;
     --color-text: #ffffff;
     --color-text-soft: #cccccc;
+    --color-accent: #6c5ce7;
   }
   
+  .main-nav {
+    display: flex;
+    gap: 24px;
+    padding: 12px 24px;
+    background: var(--color-bg-secondary);
+    border-bottom: 1px solid #333;
+  }
+
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.main-nav a:hover {
+  color: var(--color-accent);
+}
+
+.main-nav a.active {
+border-bottom: 2px solid var(--color-accent);
+}
+
+  /* スマホで縦に並ぶ */
+  @media (max-width: 360px) {
+    .main-nav {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
   
     .site-header {
         display: flex;
