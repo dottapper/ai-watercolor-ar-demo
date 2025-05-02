@@ -1,0 +1,124 @@
+/* styles.css */
+
+
+  :root {
+    --color-bg: #121212;
+    --color-bg-secondary: #1a1a1a;
+    --color-text: #ffffff;
+    --color-text-soft: #cccccc;
+    --color-accent: #6c5ce7;
+  }
+  
+  .main-nav {
+    display: flex;
+    gap: 24px;
+    padding: 12px 24px;
+    background: var(--color-bg-secondary);
+    border-bottom: 1px solid #333;
+  }
+
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.main-nav a:hover {
+  color: var(--color-accent);
+}
+
+.main-nav a.active {
+border-bottom: 2px solid var(--color-accent);
+}
+
+  /* スマホで縦に並ぶ */
+  @media (max-width: 360px) {
+    .main-nav {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+  
+    .site-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #1a1a1a;
+        color: #fff;
+        padding: 24px;
+    }
+    .site-nav a img {
+        width: 28px;
+        height: 28px;
+        filter: invert(100%);
+        transition: filter 0.2s ease, transform 0.2s ease;
+    }
+    .site-nav a:hover img {
+        transform: rotate(20deg) scale(1.1);
+    }
+    .site-nav a {
+        display: block;
+        width: 24px;
+        height: 24px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    header,footer {
+      background: var(--color-bg-secondary);
+    }
+
+    body {
+      background: var(--color-bg);
+      color: var(--color-text);
+    }
+
+    main {
+      padding: 24px;
+    }
+
+
+    footer {
+      color: var(--color-text-soft);
+      padding: 24px;
+      text-align: center;
+    }
+
+    .flower-list {
+        margin-top: 16px 0;
+        padding-left: 20px;
+        line-height: 1.6;
+        list-style-type: disc;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    @media (max-width: 300px) {
+      .content {
+        max-width: 90%;
+        padding: 16px;
+      }
+
+      .flower-list {
+        padding-left: 16px; /* モバイルでインデント調整 */
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        to {opacity: 1;
+        }
+      }
+    }
+    h1 {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+    
