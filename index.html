@@ -1,6 +1,12 @@
 <body>
-    <header>
+    <header class="site-header">
       <h1>Hello Watercolor AR🎨</h1>
+      <nav class="site-nav">
+        <a href="https://github.com/dottapper/ai-watercolor-ar-demo/" 
+        target="_blank"rel="noopener">
+        <img src="assets/github-mark-white.svg" alt="GitHub Repository" 
+        </a>
+      </nav>
     </header>
   
     <main>
@@ -14,6 +20,29 @@
   </body>
   
   <style>
+    .site-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #1a1a1a;
+        color: #fff;
+        padding: 24px;
+    }
+    .site-nav a img {
+        width: 28px;
+        height: 28px;
+        filter: invert(100%);
+        transition: filter 0.2s ease, transform 0.2s ease;
+    }
+    .site-nav a:hover img {
+        transform: rotate(20deg) scale(1.1);
+    }
+    .site-nav a {
+        display: block;
+        width: 24px;
+        height: 24px;
+    }
+
     * {
       margin: 0;
       padding: 0;
